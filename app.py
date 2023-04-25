@@ -21,7 +21,7 @@ tm_collection = db["footballScoreTm"]
 def get_matches(league):
 
     status = ["FINISHED", "LIVE", "SCHEDULED"]
-    keys = [os.getenv("key1"), os.getenv("key2"), os.getenv("key3")]
+    keys = [os.getenv("KEY1"), os.getenv("KEY2"), os.getenv("KEY3")]
     x = 0
 
     while(x < 3):
