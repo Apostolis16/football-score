@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content%}      
+
+    <center>
+
+
+    <!-- {% if live_matches is defined%} -->
+
+        <div class ="live-matches">
+
+            <h1 class="title">Live Matches</h1>
+             
+                <div>
+                    
+
+                    {% for match in live_matches %}
+
+                        <div class="matches">
+                            <p>{{ match["homeTeam"] }}</p>  <p class="score">{{ match["homeScore"] }}</p> <br>
+                            <p>{{ match["awayTeam"] }}</p>  <p class="score">{{ match["awayScore"] }}</p>
+                        </div>
+                        <br>
+                        
+                    
+                    {% endfor %}
+
+                </div>
+
+        </div>
+
+    <!-- {% endif %}  -->
+    
+
+    <div class="todays-matches">
+                
+        <h1>Todays Matches</h1> <br>
+                
+            {% for match in todays_matches %}
+    
+                <div class="matches">
+
+                    {{ match["homeTeam"] }}  {{ match["homeScore"] }} <br>
+                    {{ match["awayTeam"] }}  {{ match["awayScore"] }}
+
+
+                </div>
+                <br>
+    
+            {% endfor %}
+        
+    </div>
+
+
+    </center>
+
+
+ 
+           
+
+    
+
+    
+    <div class="league-buttons">
+
+        <form action="#" method="POST" >
+            
+            <input type="submit" value="Premier League" name="submit-button"> <br>
+            <input type="submit" value="Bundesliga" name="submit-button"> <br>
+            <input type="submit" value="Serie A" name="submit-button"> <br>
+            <input type="submit" value="La Liga" name="submit-button"> <br>
+
+
+        </form>
+
+
+
+        <!-- <button>PREMIER LEAGUE</button> <br>
+        <button>CHAMPIONS LEAGUE</button> <br>
+        <button>PRIMEIRA LIGA</button>  <br>
+        <button>EREDIVISIE</button> <br>
+        <button>BUNDESLIGA</button> <br>
+        <button>LIGUE 1</button> <br>
+        <button>SERIE A Italy</button> <br>
+        <button>SERIE A Brazil</button> <br>
+        <button>LA LIGA</button> <br>
+        <button>EUROPE </button> <br>
+        <button>WORLDCUP</button> -->
+
+    </div>
+    
+{% endblock %}
+    
+
+

@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block content%}   
+
+<div class="league-buttons">
+
+    <form action="#" method="POST" >
+        
+        <input type="submit" value="Shceduled matches" name="submit-button">
+
+    </form>
+
+    <form action="#" method="POST" >
+        
+        <input type="submit" value="Finished matches" name="submit-button">
+
+    </form>
+
+</div>
+
+
+<center>
+
+    <!-- LIVE MATCHES -->
+
+    {% if live_matches is defined%}
+
+        <div class ="live-matches">
+         
+            <div>
+            
+
+               {% for match in live_matches %}
+
+                    <div>
+                        {{ match["homeTeam"] }}  {{ match["homeScore"] }}<br>
+                        {{ match["awayTeam"] }}  {{ match["awayScore"] }}
+                    </div>
+                
+            
+                {% endfor %}
+
+            </div>
+
+    {% endif %}
+
+    </div>
+
+    <!-- SCHEDULED MATCHES -->
+
+    <div class="scheduled-matches">
+
+        <h1>Scheduled matches</h1>
+
+            <div>
+                
+
+                {% for match in scheduled_matches %}
+
+            
+                    <div>
+                        {{ match["homeTeam"] }} <br>
+                        {{ match["awayTeam"] }}  
+                    </div>
+
+            
+                {% endfor %}
+
+            </div>
+
+    </div>
+
+    <!-- FINISHED MATCHES -->
+
+    <div class="finished-matches">
+
+        <h1>Finished matches</h1>
+
+            <div>
+                
+
+                {% for match in finished_matches %}
+            
+                    <div>
+                        {{ match["homeTeam"] }}  {{ match["homeScore"] }}<br>
+                        {{ match["awayTeam"] }}  {{ match["awayScore"] }}
+                    </div>
+
+            
+                {% endfor %}
+
+            </div>
+
+    </div>
+    
+    
+
+</center>
+
+
+
+
+
+
+
+{% endblock %}

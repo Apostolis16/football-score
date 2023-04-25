@@ -1,0 +1,79 @@
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: black; */
+  
+}
+
+input{
+border: none;
+border-radius: 5px;
+}
+
+input:hover{
+background-color: lightsteelblue;
+}
+
+.score{
+  text-align: left;
+  
+}
+
+.matches{
+  border-style:solid;
+  border-color: black;
+  border-radius: 5px;
+  border-width: thin;
+  width: 300px;
+  height: inherit;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px; 
+  padding-right: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+
+.league-buttons{
+position: fixed;
+top: 35%;
+left: 2%;
+
+
+
+}
+
+.live-matches{
+position: relative;
+top: 150px;
+}
+
+
+.todays-matches{
+position: relative; 
+top: 200px; 
+}
+
+
+/* @media screen and (max-width: 768px) {
+  body {
+    font-size: small;
+  }
+  
+  h1{
+    font-size: x-large;
+  }
+
+
+} /*
+
+
+
+
+
+
+
+ 
